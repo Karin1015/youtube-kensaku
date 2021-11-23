@@ -41,7 +41,7 @@ def video_search(youtube, q='ヒカル', max_results=50):
     return df_video
 
 def get_results(df_video, threshold=50000):
-#     df_video = video_search(youtube, q='Python 自動化', max_results=30)
+#     df_video = video_search(youtube, q='', max_results=30)
     channel_ids = df_video['channel_id'].unique().tolist()
 
 
@@ -133,6 +133,6 @@ if st.button('ビデオ表示'):
         except:
             st.error(
                 """
-                **おっと！何かエラーが起きているようです。** :(
+                **エラーです。** :(
             """
             )
